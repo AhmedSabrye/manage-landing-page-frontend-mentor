@@ -21,7 +21,8 @@
 
     <title>Frontend Mentor | Manage landing page</title>
   </head>
-  <body>
+  <body><div>
+    
     <div class="bg-pattern-top"></div>
     <div class="bg-pattern-bottom"></div>
 
@@ -54,8 +55,7 @@
         <div class="hero-content">
           <h1>Bring everyone together to build better products.</h1>
           <p>
-            Manage makes it simple for software teams to plan day-to-day tasks
-            while keeping the larger team goals in view.
+            Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
           </p>
           <button class="btn">Get Started</button>
         </div>
@@ -113,7 +113,7 @@
       </section>
 
       <!-- Testimonials Section -->
-      <section class="testimonials container">
+      <section class="testimonials">
         <h2>What they've said</h2>
 
         <div class="testimonials-slider">
@@ -141,7 +141,7 @@
             <img src="./images/avatar-richard.png" alt="Richard Watts" />
             <h3>Richard Watts</h3>
             <p>
-              "Manage allows us to provide structure and process. It keeps us
+              "Manage allows us to provide structure and process. It <br>keeps us
               organized and focused. I can't stop recommending them to everyone
               I talk to!"
             </p>
@@ -157,14 +157,6 @@
             </p>
           </div>
         </div>
-
-        <div class="slider-dots">
-          <div class="dot active"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-
         <button class="btn">Get Started</button>
       </section>
 
@@ -206,28 +198,27 @@
           </div>
         </div>
 
-        <div class="footer-nav">
-          <ul class="footer-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-
-          <ul class="footer-menu">
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-right">
-          <form class="form">
-            <input type="email" placeholder="Updates in your inbox…" required />
-            <button type="submit" class="btn">Go</button>
-          </form>
-
-          <p class="copyright">Copyright 2020. All Rights Reserved</p>
+        <div class="footer-right-main">
+          <div class="footer-nav">
+            <ul class="footer-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-right">
+            <form class="form">
+              <input type="email" placeholder="Updates in your inbox…" required />
+              <button type="submit" class="btn">Go</button>
+            </form>
+  
+            <p class="copyright">Copyright 2020. All Rights Reserved</p>
+          </div>
         </div>
       </div>
 
@@ -257,8 +248,14 @@
         navMenu.classList.remove("active");
       });
 
-      
+      const slider = document.querySelector(".testimonials-slider");
+      slider.scrollLeft = 100;
+      slider.addEventListener("scroll", (e) => {
+        console.log(e.target.scrollLeft);
+
+      });
 
     </script>
-  </body>
+  
+  </div></body>
 </html>
